@@ -56,6 +56,16 @@ body {
 
 .nav-list,
 .info-list {
+  display: flex;
+}
+
+.nav-list-li:not(:last-child),
+.info-list-li:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-list,
+.info-list {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.06;
@@ -74,6 +84,9 @@ body {
 .nav-link,
 .info-link {
   text-decoration: none;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .nav-list :hover,
 .nav-list :focus {
@@ -331,6 +344,7 @@ body {
 .portfolio-item-title {
   margin: 0px;
   padding: 0px;
+
   color: var(--primary-text-color);
   font-weight: bold;
   font-size: 18px;
@@ -341,6 +355,7 @@ body {
   margin: 0px;
   padding: 0px;
   padding-top: 4px;
+
   color: var(--title-color);
   font-weight: normal;
   font-size: 16px;
@@ -361,20 +376,24 @@ body {
 .portfolio-item {
   margin: 0px;
   padding: 0px;
-  padding-top: 50px;
+  margin-bottom: 30px;
   margin-left: 30px;
-  margin-top: 30px;
+
   flex-basis: calc(100% / 3 -30px);
 }
-
-.portfolio {
+.filter-button-li {
   margin: 0px;
   padding: 0px;
+  margin-left: 8px;
+}
+
+.portfolio.list {
+  margin: 0px;
+  padding: 0px;
+  padding-top: 50px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-top: -30px;
 }
 .portfolio-card {
   box-shadow: #eeeeee;
@@ -383,4 +402,6 @@ body {
 .portfolio-content {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
 }
