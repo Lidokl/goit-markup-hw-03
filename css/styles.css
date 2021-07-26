@@ -50,28 +50,36 @@ body {
 
 /* шапка */
 
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list,
+.info-list {
+  margin: 0px;
+  padding: 0px;
+
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.06;
+  list-style: none;
+}
 .nav-link.current {
   color: var(--accent-color);
 }
 
-.nav-list,
-.info-list {
+.nav-list {
   display: flex;
+  margin-left: 93px;
+}
+.info-list {
+  margin-left: auto;
 }
 
 .nav-list-li:not(:last-child),
 .info-list-li:not(:last-child) {
   margin-right: 50px;
-}
-
-.nav-list,
-.info-list {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.06;
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
 }
 
 .nav-link {
@@ -85,24 +93,30 @@ body {
 .info-link {
   text-decoration: none;
   display: block;
-  padding-top: 32px;
   padding-bottom: 32px;
+  padding-top: 32px;
 }
+
 .nav-list :hover,
 .nav-list :focus {
   color: var(--accent-color);
 }
+
 .info-list :hover,
 .info-list :focus {
   color: var(--accent-color);
   text-decoration: none;
+  margin-left: auto;
+  margin-left: 331px;
 }
 
+/* герой */
+
 .hero {
+  margin-top: 0px;
+
   background: var(--title-black);
   text-align: center;
-
-  margin-top: 0px;
 }
 .hero-text {
   margin-top: 0px;
@@ -242,9 +256,6 @@ body {
   box-shadow: #757575;
 }
 
-.team-thumb {
-}
-
 .team-content {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -321,6 +332,12 @@ body {
 }
 
 /* Портфолио */
+.list {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
 
 /* кнопки в портфолио*/
 .filter .filter-button {
@@ -362,16 +379,12 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
-.list {
-  margin: 0px;
-  padding: 0px;
-  list-style: none;
-  text-decoration: none;
-}
-.filter.list {
+
+.filter {
   margin: 0px;
   padding: 0px;
   display: flex;
+  justify-content: center;
 }
 .portfolio-item {
   margin: 0px;
