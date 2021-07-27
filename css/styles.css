@@ -386,8 +386,8 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
+
 .portfolio-item {
   width: 370px;
 }
