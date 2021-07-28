@@ -8,6 +8,14 @@
   --accent-color: #2196f3;
   --bgc-button: #f5f4fa;
   --title-text-color: #000000;
+  --border: #eeeeee;
+  --border-header: #ececec;
+  --box-shadow-hero: rgba(0, 0, 0, 0.15);
+  --box-shadow-team: rgba(0, 0, 0, 0.12);
+  --box-shadow-team-c: rgba(0, 0, 0, 0.14);
+  --box-shadow-team-card: rgba(0, 0, 0, 0.2);
+  --box-shadow-filter: rgba(0, 0, 0, 0.1);
+  --box-shadow-filt: rgba(0, 0, 0, 0.08);
 }
 
 img {
@@ -47,12 +55,12 @@ body {
 }
 
 .logo-footer {
-  color: var(--button-bgc);
+  color: var(--primary-bgc);
 }
 
 /* шапка */
 .header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-header);
 }
 
 .main-nav {
@@ -111,8 +119,6 @@ body {
 .info-list :focus {
   color: var(--accent-color);
   text-decoration: none;
-  margin-left: auto;
-  margin-left: 331px;
 }
 
 /* герой */
@@ -143,7 +149,7 @@ body {
   align-items: center;
 
   letter-spacing: 0.06em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px var(--box-shadow-hero);
   border-radius: 4px;
   border: none;
   font-weight: bold;
@@ -183,8 +189,7 @@ body {
   margin: 0px;
   padding: 0px;
   display: flex;
-  flex-basis: calc(100% / 4);
-
+  justify-content: space-between;
   list-style: none;
 }
 
@@ -216,20 +221,16 @@ body {
 .img {
   margin: 0px;
   padding: 0px;
+  justify-content: space-around;
   list-style: none;
   display: flex;
   padding-bottom: 94px;
 }
 
-.img-t {
-  flex-basis: calc(100% / 3);
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
 .item {
   margin-top: 30px;
   margin-left: 30px;
+  width: 270px;
 }
 
 /*наша команда */
@@ -237,7 +238,6 @@ body {
 .title {
   margin: 0px;
   padding: 0px;
-
   padding-bottom: 50px;
 }
 
@@ -248,28 +248,27 @@ body {
 .team-work {
   margin: 0px;
   padding: 0px;
+  justify-content: space-between;
   list-style: none;
   display: flex;
 }
 
 .team-card {
-  margin-left: 15px;
-  margin-right: 15px;
-  flex-basis: calc(100% / 4);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px var(--box-shadow-team),
+    0px 1px 1px var(--box-shadow-team-c),
+    0px 2px 1px var(--box-shadow-team-card);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team {
-  box-shadow: #757575;
+  box-shadow: var(--title-color);
 }
 
 .team-content {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
-  background-color: var(--button-bgc);
+  background-color: var(--primary-bgc);
 }
 
 .team-list {
@@ -306,7 +305,7 @@ body {
 }
 
 .address {
-  margin: 20px;
+  margin: 20px 0 0;
   padding: 0px;
 }
 
@@ -328,16 +327,10 @@ body {
 .footer-address-navigate {
   margin: 0px;
   padding: 0px;
-
+  margin-top: 9px;
   color: var(--secondary);
   text-decoration: none;
   font-style: normal;
-}
-
-.info-list.link {
-  margin: 0px;
-  padding: 0px;
-  margin-top: 9px;
 }
 
 /* Портфолио */
@@ -350,28 +343,30 @@ body {
 
 /* кнопки в портфолио*/
 .filter .filter-button {
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   border-radius: 4px;
   border: none;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+
   background: var(--bgc-button);
   cursor: pointer;
-  color: varvar(--accent-color);
+  color: var(--primary-text-color);
   font-style: normal;
   text-align: center;
 }
-.filter-button-li {
+.filter-button {
   margin: 0px;
   padding: 0px;
   margin-left: 8px;
 }
 .filter .filter-button:hover,
 .filter .filter-button:focus {
-  color: var(--button-bgc);
+  color: var(--primary-bgc);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px var(--box-shadow-filter),
+    0px 1px 2px var(--box-shadow-filt), 0px 2px 2px var(--box-shadow-team);
 }
 
 .filter {
@@ -405,17 +400,13 @@ body {
   margin-bottom: 30px;
 }
 
-.portfolio-item .portfolio-card {
-  box-shadow: #eeeeee;
-}
-
 .portfolio-content {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #ffffff;
-  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+  background-color: var(--primary-bgc);
+  border: 1px solid var(--border);
   border-top: none;
 }
+
 .portfolio-item-title {
   margin: 0px;
   padding: 0px;
