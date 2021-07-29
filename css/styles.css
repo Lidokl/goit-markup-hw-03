@@ -17,6 +17,14 @@
   --box-shadow-filter: rgba(0, 0, 0, 0.1);
   --box-shadow-filt: rgba(0, 0, 0, 0.08);
 }
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
 
 img {
   display: block;
@@ -25,10 +33,8 @@ img {
 }
 
 .container {
-  margin: 0 auto;
-  width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 1200px;
+  padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -90,8 +96,8 @@ body {
   margin-left: auto;
 }
 
-.nav-list-li:not(:last-child),
-.info-list-li:not(:last-child) {
+.nav-list-item:not(:last-child),
+.info-list-item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -106,8 +112,7 @@ body {
 .info-link {
   text-decoration: none;
   display: block;
-  padding-bottom: 32px;
-  padding-top: 32px;
+  padding: 32px 0;
 }
 
 .nav-list :hover,
@@ -173,19 +178,17 @@ body {
   padding-bottom: 94px;
 }
 
-.feature {
-  margin: 0px;
-  padding: 0px;
+.feature-item-title {
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  list-style: none;
+
   color: var(--primary-text-color);
 }
 
-.feature-section {
+.feature-list {
   margin: 0px;
   padding: 0px;
   display: flex;
@@ -193,19 +196,19 @@ body {
   list-style: none;
 }
 
-.feature-text {
-  margin: 0px;
-  padding: 0px;
+.feature-item-text {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
-  list-style: none;
+
   letter-spacing: 0.03em;
   color: var(--title-color);
 }
 
 .title {
+  margin-bottom: 50px;
+
   color: var(--primary-text-color);
   font-weight: bold;
   font-size: 36px;
@@ -213,33 +216,22 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.title,
-.img {
-  list-style: none;
-}
 
 .img {
   margin: 0px;
   padding: 0px;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style: none;
   display: flex;
   padding-bottom: 94px;
 }
 
-.item {
+.feature-list-item {
   margin-top: 30px;
-  margin-left: 30px;
   width: 270px;
 }
 
 /*наша команда */
-
-.title {
-  margin: 0px;
-  padding: 0px;
-  padding-bottom: 50px;
-}
 
 .team-info {
   background-color: var(--bgc-button);
@@ -269,12 +261,10 @@ body {
   padding-bottom: 30px;
   text-align: center;
   background-color: var(--primary-bgc);
+  border-radius: 0px 0px 4px 4px;
 }
 
-.team-list {
-  margin: 0px;
-  padding: 0px;
-
+.team-name {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -283,8 +273,6 @@ body {
 }
 
 .team-text {
-  margin: 0px;
-  padding: 0px;
   padding-top: 10px;
 
   color: var(--title-color);
@@ -309,7 +297,7 @@ body {
   padding: 0px;
 }
 
-.logo.log {
+.logo {
   margin: 0px;
   padding: 0px;
 }
@@ -317,7 +305,7 @@ body {
 .footer-address {
   margin: 0px;
   padding: 0px;
-
+  font-style: normal;
   color: var(--primary-bgc);
   text-decoration: none;
   line-height: 1.71;
@@ -376,11 +364,6 @@ body {
   justify-content: center;
 }
 
-.portfolio {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
 .portfolio.list {
   padding-top: 50px;
 
@@ -408,18 +391,14 @@ body {
 }
 
 .portfolio-item-title {
-  margin: 0px;
-  padding: 0px;
-
   color: var(--primary-text-color);
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
+
 .portfolio-item-text {
-  margin: 0px;
-  padding: 0px;
   padding-top: 4px;
 
   color: var(--title-color);
